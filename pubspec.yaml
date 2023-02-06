@@ -1,0 +1,38 @@
+name: ci_dangerzone_app
+description: A new Flutter project.
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.18.6 <3.0.0"
+
+dependencies:
+  crypton: ^2.1.0
+  cupertino_icons: ^1.0.2
+  flame: ^1.6.0
+  flutter:
+    sdk: flutter
+  http: ^0.13.5
+  lua_dardo: #^0.0.4
+    git:
+      url: https://github.com/maks/LuaDardo
+      ref: js_int_size_fix
+
+dev_dependencies:
+  flutter_lints: ^2.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/
+    - assets/images/
+
+  fonts:
+    - family: FutilePro
+      fonts:
+        - asset: assets/fonts/FutilePro.ttf

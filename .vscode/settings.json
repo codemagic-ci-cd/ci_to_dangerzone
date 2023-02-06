@@ -1,0 +1,8 @@
+{
+  "Lua.diagnostics.globals": [
+    "mkObstacle",
+    "doObstacles",
+    "mkRandom",
+    "random"
+  ]
+}
