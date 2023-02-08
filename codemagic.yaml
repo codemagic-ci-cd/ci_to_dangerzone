@@ -9,6 +9,7 @@ workflows:
       groups:
         - firebase
         - script-signing
+        - artifacts
     triggering:
       events:
         - push
