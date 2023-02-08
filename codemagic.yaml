@@ -47,6 +47,9 @@ workflows:
         flutter build web --release
         cd build/web
         7z a -r ../web.zip ./*
+      - |
+        # get public urls with longer expiry time
+        tools/get_public_url.dart
     artifacts:
       - build/**/outputs/apk/**/*.apk
       - build/**/outputs/bundle/**/*.aab
