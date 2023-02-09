@@ -1,6 +1,6 @@
 # CI to the DangerZone
 
-A basic Flame based game to demonstrate concepts for using Lua based scripting in a game, including use of code signing.
+A basic Flame based game to demonstrate some of the concepts for using Lua based scripting in a game from Dart, including use of code signing.
 
 Incidentally also provides an example of how to use the sprite stacking technique in Flame, though really you should use the excellent [Sashimi](https://pub.dev/packages/sashimi) package from @wolfenrain to handle sprite stacking in Flame games.
 
