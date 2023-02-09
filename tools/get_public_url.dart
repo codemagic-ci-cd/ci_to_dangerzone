@@ -8,7 +8,7 @@ import 'package:http/http.dart' as http;
 /// Expect to have CM_API_TOKEN env var set with a Codemagic API Token
 /// see: https://docs.codemagic.io/rest-api/codemagic-rest-api/#authentication
 
-void main(List<String> args) {
+void main(List<String> args) async {
   final artifactsJsonString = exitIfNull(
     Platform.environment["CM_ARTIFACT_LINKS"],
     "missing CM Artifacts env variable",
@@ -22,8 +22,8 @@ void main(List<String> args) {
       continue;
     }
     print("getting public url for artifact: $url");
-    final publicUrl = getPublicUrl(url);
-    print("public url data: $publicUrl");
+    final publicUrl = await getPublicUrl(url);
+    print("public url data:\n$publicUrl");
   }
 }
 
