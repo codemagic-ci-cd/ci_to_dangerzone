@@ -48,9 +48,6 @@ workflows:
         flutter build web --release
         cd build/web
         7z a -r ../web.zip ./*
-      - |
-        # get public urls with longer expiry time
-        tools/get_public_url.dart
     artifacts:
       - build/**/outputs/apk/**/*.apk
       - build/**/outputs/bundle/**/*.aab
@@ -65,6 +62,10 @@ workflows:
       email:
         recipients:
           - maks@manichord.com
+      scripts:
+      - |
+        # get public urls with longer expiry time
+        tools/get_public_url.dart      
   sign-upload-only-workflow:
     name: Sign and upload script Only Workflow
     max_build_duration: 10
