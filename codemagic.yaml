@@ -48,6 +48,10 @@ workflows:
         flutter build web --release
         cd build/web
         7z a -r ../web.zip ./*
+      - | 
+        #!/bin/sh
+        set -ex
+        printenv  
       - |
         # get public urls with longer expiry time
         tools/get_public_url.dart
